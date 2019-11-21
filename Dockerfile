@@ -2,7 +2,7 @@ FROM python:alpine
 
 ARG CLI_VERSION=1.16.86
 
-RUN apk -uv add --no-cache bash groff jq less && \
+RUN apk -uv add --no-cache bash curl groff jq less && \
     pip install --no-cache-dir awscli==$CLI_VERSION
 
 WORKDIR /aws
